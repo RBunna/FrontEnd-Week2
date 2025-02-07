@@ -1,0 +1,52 @@
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  box-sizing: border-box;
+  max-width: 1120px;
+  margin: 20px auto;
+
+  .container {
+    max-height: 80vh;
+    margin: 0 30px;
+    padding: 20px 30px;
+    border: 1px solid #1f1f1f;
+  
+    display: flex;
+    column-gap: 10%;
+    div:nth-child(1) {
+      flex-grow: 1;
+      
+      * { margin: 10px 0 0; }
+      :nth-child(-n + 2) { margin: 0; }
+      :nth-child(2), select { border: 1px solid gray; }
+      :nth-child(2) { 
+        height: 1.2rem; 
+        width: 12rem;
+        border-radius: 1rem;
+      }
+      select { 
+        height: 1.6rem; 
+        width: 6rem;
+      }
+    }
+    div.right {
+      width: 40%;
+      height: auto;
+      overflow-y: auto;
+      display: inline;
+
+      .task { 
+        height: 1.6rem; 
+        width: 100%;
+        margin: 0 0 8px;
+        text-align: center;
+        color: white;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
