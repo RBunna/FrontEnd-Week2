@@ -9,13 +9,17 @@ function hideTasks(task) {
 let tasks = [];
 
 function add() {
+  if (task.value === "") {
+    alert("Task value must not be empty!");
+    return;
+  }
   tasks.push(task.value, prior.value);
   const text = document.createElement('p');
   text.textContent = task.value;
 
   const newTask = document.createElement('div');
   newTask.classList.add('task');
-  newTask.style.backgroundColor = (prior.value == 'Low') ? "Gray" : "Red";
+  newTask.style.backgroundColor = (prior.value === 'Low') ? "Gray" : "Red";
 
   newTask.appendChild(text);
   document.getElementsByClassName('right')[0].appendChild(newTask);
